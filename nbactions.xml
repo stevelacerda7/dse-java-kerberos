@@ -10,8 +10,9 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-Djavax.net.ssl.trustStore=/Users/stevelacerda/.ssh/lacerda_sa_5_1_truststore.jks -Djavax.net.ssl.trustStorePassword=cassandra -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath ${packageClassName} 10.101.34.131 cassandra cassandra -X</exec.args>
+                <exec.args>--add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath com.example.cassandra.TestingConnections 10.101.32.187 cassandra cassandra -X</exec.args>
                 <exec.executable>java</exec.executable>
+                <jshell.run.enable>true</jshell.run.enable>
             </properties>
         </action>
         <action>
@@ -24,9 +25,10 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} -Djavax.net.ssl.trustStore=/Users/stevelacerda/.ssh/lacerda_sa_5_1_truststore.jks -Djavax.net.ssl.trustStorePassword=cassandra -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath ${packageClassName} 10.101.34.131 cassandra cassandra -X</exec.args>
+                <exec.args>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address} --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath com.example.cassandra.TestingConnections 10.101.32.187 cassandra cassandra -X</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
+                <jshell.run.enable>true</jshell.run.enable>
             </properties>
         </action>
         <action>
@@ -39,7 +41,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-Djavax.net.ssl.trustStore=/Users/stevelacerda/.ssh/lacerda_sa_5_1_truststore.jks -Djavax.net.ssl.trustStorePassword=cassandra -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath ${packageClassName} 10.101.34.131 cassandra cassandra -X</exec.args>
+                <exec.args>--add-opens java.base/jdk.internal.misc=ALL-UNNAMED -Dio.netty.tryReflectionSetAccessible=true -classpath %classpath com.example.cassandra.TestingConnections 10.101.32.187 cassandra cassandra -X</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
