@@ -8,7 +8,7 @@ import java.net.InetSocketAddress;
 public class TestingConnections {
     public CqlSession session;
     
-    public void connect(String nodeIp, String user, String pwd) {
+    public void connect() {
         System.setProperty("sun.security.krb5.debug", "true");
         System.setProperty("dse.sasl.service", "dse_automaton");
         System.setProperty("javax.security.sasl.qop", "auth");
@@ -33,12 +33,8 @@ public class TestingConnections {
             session.close();
     }
     public static void main(String[] args) {
-        String ip = "10.101.32.187";
-        String username = "username";
-        String password = "password";
-        System.out.printf("Connecting to %s\n", ip);
         TestingConnections client = new TestingConnections();
-        client.connect(ip, username, password);
+        client.connect();
         client.close();            
     }
 }
