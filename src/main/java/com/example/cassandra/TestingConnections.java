@@ -11,7 +11,6 @@ public class TestingConnections {
     public void connect() {
         System.setProperty("sun.security.krb5.debug", "true");
         System.setProperty("dse.sasl.service", "dse_automaton");
-        System.setProperty("javax.security.sasl.qop", "auth");
 
         session = CqlSession.builder()
             .build();
