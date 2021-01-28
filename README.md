@@ -30,12 +30,20 @@ authentication_options:
     scheme_permissions: false
     default_scheme: kerberos
     enabled: true
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> fe3388f8428c4d0e2784ddb1038acf3e0acb2623
 kerberos_options:
     keytab: /home/automaton/ctool_security/dse.keytab
     service_principal: dse_automaton/_HOST@lacerda-kerberos
     http_principal: HTTP/_HOST@lacerda-kerberos
     qop: auth
+<<<<<<< HEAD
 ```    
 
 
+=======
+```
+>>>>>>> fe3388f8428c4d0e2784ddb1038acf3e0acb2623
